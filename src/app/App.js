@@ -1,11 +1,12 @@
-import React from 'react'
-import AddTodo from '../containers/AddTodo'; // containers as functionals
+import React from "react";
+import AddTodo from "../containers/AddTodo"; // containers as functional, components non functional
+import VisibleTodoList from "../containers/VisibleTodoList";
 
 const App = () => (
-<div>
+  <div>
     <AddTodo />
-</div>
-
-)
+    <VisibleTodoList />
+  </div>
+);
 
 export default App;
