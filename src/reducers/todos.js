@@ -1,5 +1,4 @@
 const todos = (state = [], action) => {
-    // if state not defined pass empty array
     switch (action.type) {
       case 'ADD_TODO':
         return [
@@ -10,6 +9,10 @@ const todos = (state = [], action) => {
             completed: false
           }
         ];
+      case 'TOGGLE_TODO':
+        return state.map(todo =>
+            todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
+          );
       default:
         return state;
     }
