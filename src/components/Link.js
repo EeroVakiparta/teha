@@ -1,15 +1,17 @@
-import React from 'react';
+import React from "react";
+import Button from 'react-bootstrap/Button';
 
 const Link = ({ active, onClick, children }) => (
-  <button
-    onClick={ onClick }
-    disabled={ active }
+  <Button
+    onClick={onClick}
+    disabled={active}
     style={{
-      marginLeft: '4px'
+        width:"10%",
+      marginLeft: "1em",
     }}
   >
     {children}
-  </button>
+  </Button>
 );
 
 export default Link;
